@@ -15,11 +15,11 @@ You can develop Android and iOS apps on Windows, Mac or Linux. However to publis
 
 You may use an Android or iOS emulator directly on your laptop (no smartphone needed). You'll find the instructions in the React Native docs [here](https://facebook.github.io/react-native/docs/getting-started) in the "Building Projects with Native Code" tab.
 
-_This option will allow you to develop iOS apps on a Mac **or** Android apps on any platform._ Make sure to run Android Studio or Xcode at least once to make sure all is good.
+_This option will allow you to develop **iOS apps on a Mac** or Android apps on any platform._ Make sure to run Android Studio or Xcode at least once to make sure all is good.
 
 ## Option 2: using your Android or iOS device
 
-You can also use your smartphone to develop your app. For this, you'll need:
+You can also use your smartphone to develop your app. _This option will allow you to develop iOS and Android apps **on any platform**_, though you'll still need a Mac to publish iOS apps to the App Store. For this, you'll need:
 
 - An Android phone with Android 4.4 or later, or an iPhone with iOS 9 or later.
 - The Expo app installed on your phone.
@@ -45,8 +45,6 @@ Open the camera app on your phone and point it to one of these QR codes to get E
   </tr>
 </table>
 
-_This option will allow you to develop iOS and Android apps **on any platform**._
-
 # Software setup
 
 Once you've decided which option is right for you, make sure the following software are also installed on your machine:
@@ -54,4 +52,8 @@ Once you've decided which option is right for you, make sure the following softw
 - [Node & NPM](https://nodejs.org)
 - [Expo](https://docs.expo.io)
 
-[Back to instructions](https://github.com/frnkly/react-native-tutorial#table-of-contents)
+[&rarr; intro to React Native](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/intro.md)
+
+[&larr; list of modules](https://github.com/frnkly/react-native-tutorial#modules)
+
+_Were you able to install the required software? I'd love to know where you got hung up :point_right: [bit.ly/yakitty-feedback](http://bit.ly/yakitty-feedback)_

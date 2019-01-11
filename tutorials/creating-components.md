@@ -14,6 +14,8 @@ This is only an example, but keep in mind you can have your own opinion as to wh
 - [Message component](#message-component)
 - [Input component](#input-component)
 - [Restructuring our components](#restructuring-our-components)
+- [Next module: Using state and integrating 3rd party libraries (Moment.js)](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/state.md)
+- [Back to list of modules](https://github.com/frnkly/react-native-tutorial#modules)
 
 ## MessageList component
 
@@ -438,3 +440,9 @@ const messages = [
 Now we're _looking good_. Great work. Now that we have our basic components, **go ahead a take a short break**. You've earned it!!
 
 [&uarr; back to table of contents](#table-of-contents)
+
+[&rarr; using state](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/state.md)
+
+[&larr; list of modules](https://github.com/frnkly/react-native-tutorial#modules)
+
+_Did you understand the concept of Components? I'd love to hear your feedback or comments if you have any :point_right: [bit.ly/yakitty-feedback](http://bit.ly/yakitty-feedback)_

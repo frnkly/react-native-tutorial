@@ -4,7 +4,7 @@
 
 >yak (verb): to talk persistently. Also, a large long-haired wild or domesticated ox :ox:
 
-Yakitty is a simple [React Native](https://facebook.github.io/react-native) tutorial for building smooth-running Android and iOS apps using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript). If you're interested, have a look at the [requirements](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/requirements.md) before getting started.
+Yakitty is a simple [React Native](https://facebook.github.io/react-native) tutorial for building smooth-running Android and iOS apps using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript). If you're interested, **have a look at the [requirements](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/requirements.md)** before getting started.
 
 To get the most out of this tutorial, you should have a basic understanding of [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript). Knowing the basics of [React](https://reactjs.org/tutorial/tutorial.html) will be helpful too, but it's not required.
 
@@ -12,11 +12,11 @@ This is meant to give you a taste of what you can do with React Native. I encour
 
 # First things first
 
-This tutorial is split up into modules, each taking roughly 30 to 60 minutes to complete. You'll find the list of modules at the end of this page.
+This tutorial is split up into modules, each taking roughly 30 to 60 minutes to complete. You'll find all the modules at the end of this page.
 
 ## What are we building?
 
-We're going to build an Android or iOS app _with our bear hands_ :bear:.
+We're going to build an Android or iOS app _with our bear hands_. :bear:
 
 ## What will we learn?
 
@@ -61,6 +61,7 @@ I'll even provide you these QR codes for your convenience, so you don't have to 
 
 # Modules
 
+- [Requirements](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/requirements.md)
 - [Intro to React Native](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/intro.md)
 - [Creating components](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/creating-components.md)
 - [Using state and integrating 3rd party libraries (Moment.js)](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/state.md)

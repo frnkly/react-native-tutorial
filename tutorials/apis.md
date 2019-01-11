@@ -14,6 +14,7 @@ Just like Messenger or Slack, our app needs to store data in the cloud, or on _s
 - [Integrating Chatkit](#integrating-chatkit)
 - [Improving our UI](#improving-our-ui)
 - [Hiding developer secrets](#hiding-developer-secrets)
+- [Back to list of modules](https://github.com/frnkly/react-native-tutorial#modules)
 
 # Creating a Chatkit account
 
@@ -472,6 +473,6 @@ export default chatManager
 
 [&uarr; back to table of contents](#table-of-contents)
 
-_I'd love to hear your feedback about this tutorial. I `await` your comments and I `Promise` to read them all eventually..._
+[&larr; list of modules](https://github.com/frnkly/react-native-tutorial#modules)
 
-:point_right: [bit.ly/yakitty-feedback](http://bit.ly/yakitty-feedback)
+_Were you able to integrate the Chatkit API? I'd love to hear your feedback. I `await` your comments and I `Promise` to read them all eventually... :point_right: [bit.ly/yakitty-feedback](http://bit.ly/yakitty-feedback)_

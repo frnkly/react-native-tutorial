@@ -7,6 +7,8 @@
   - [Running the app](#running-the-app)
 - [React and React Native basics](#react-and-react-native-basics)
   - [JSX: HTML in JavaScript](#jsx-html-in-javascript)
+- [Next module: Creating components](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/creating-components.md)
+- [Back to list of modules](https://github.com/frnkly/react-native-tutorial#modules)
 
 # Terminal basics
 
@@ -78,17 +80,19 @@ We've just used the `npx` command provided by NPM to run a helpful script (`crea
 
 Now let's run the app to see what we have so far. From your terminal, execute one of the following commands:
 
-    # If you're using your Android phone or iPhone. Don't forget to open the Expo app on your phone.
-    expo start
+```shell
+# If you're using your Android phone or iPhone. Don't forget to open the Expo app on your phone.
+expo start
 
-    # To use Expo with the Android emulator.
-    expo android
+# To use Expo with the Android emulator.
+expo android
 
-    # To use Expo with the iOS emulator.
-    expo ios
+# To use Expo with the iOS emulator.
+expo ios
 
-    # You can also run the emulator with the React Native scripts.
-    react-native run-android
+# You can also run the emulator with the React Native scripts.
+react-native run-android
+```
 
 You can use the camera on your phone to point at the QR code that just appeared in your browser. It will open the Expo app on your phone _automagically_.
 
@@ -131,3 +135,9 @@ Now, add a few more `<Text>` elements, just for fun (don't forget to save your c
 Since we're on a mission to build something a little more useful, I'm going to skip over a few things, but I encourage you to read the excellent documentation on [JSX](https://reactjs.org/docs/introducing-jsx.html) as well as [React Native](https://facebook.github.io/react-native/docs/tutorial.html) when you have time.
 
 [&uarr; back to table of contents](#table-of-contents)
+
+[&rarr; creating components](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/creating-components.md)
+
+[&larr; list of modules](https://github.com/frnkly/react-native-tutorial#modules)
+
+_Was the introduction clear? I'd love to hear your feedback or comments if you have any :point_right: [bit.ly/yakitty-feedback](http://bit.ly/yakitty-feedback)_

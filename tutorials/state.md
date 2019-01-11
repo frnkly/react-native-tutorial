@@ -2,6 +2,8 @@
 
 - [Using state](#using-state)
 - [Integrating Moment.js](#integrating-momentjs)
+- [Next module: Integrating 3rd party APIs (Chatkit)](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/apis.md)
+- [Back to list of modules](https://github.com/frnkly/react-native-tutorial#modules)
 
 # Using state
 
@@ -259,3 +261,9 @@ export default ({ sender, text, timestamp }) => (
 Voilà! Yakitty is now a professional-looking chat app :raised_hands:
 
 [&uarr; back to table of contents](#table-of-contents)
+
+[&rarr; integrating 3rd party APIs](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/apis.md)
+
+[&larr; list of modules](https://github.com/frnkly/react-native-tutorial#modules)
+
+_Did you understand the difference between State and Props? I'd love to hear your feedback or comments if you have any :point_right: [bit.ly/yakitty-feedback](http://bit.ly/yakitty-feedback)_
