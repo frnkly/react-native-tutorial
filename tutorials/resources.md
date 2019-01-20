@@ -1,0 +1,23 @@
+# Resources
+
+- Things we saw in this tutorial:
+  - React Native scripts & [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli) (command line interface)
+  - [Props](https://reactjs.org/docs/components-and-props.html)
+  - [State & Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+  - [JSX](https://reactjs.org/docs/introducing-jsx.html)
+  - [APIs](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82)
+  - [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  - [KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
+  - [FlatList](https://facebook.github.io/react-native/docs/flatlist.html)
+  - [Other React Native components](https://facebook.github.io/react-native/docs/components-and-apis)
+- Other React-related resources:
+  - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html), along with the general [docs](https://reactjs.org/docs/hello-world.html)
+  - [React tutorial](https://reactjs.org/tutorial/tutorial.html)
+  - [React Native tutorial](https://facebook.github.io/react-native/docs/tutorial.html)
+  - [React Native Express](http://www.reactnativeexpress.com) for more learning
+  - [React Native libraries, tools and tutorials](https://www.awesome-react-native.com)
+  - [More React Native libraries (react.parts)](https://react.parts/?collection=React+Native)
+- More excellent resources:
+  - [JavaScript tutorial](https://developer.mozilla.org/en-US/docs/Web/javascript) by Mozilla
+  - [Alternatives](https://alternativeto.net/software/react-native) to React Native
+  - [React 360](https://facebook.github.io/react-360) for VR applications

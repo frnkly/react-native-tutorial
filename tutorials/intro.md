@@ -1,4 +1,6 @@
-# Intro to React Native
+# Yakitty: a chat app for everyone :point_right: [bit.ly/yakitty](http://bit.ly/yakitty)
+
+## Module: **Intro to React Native**
 
 ## Table of contents
 
