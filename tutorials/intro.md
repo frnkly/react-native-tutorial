@@ -105,7 +105,7 @@ You can use the camera on your phone to point at the QR code that just appeared 
 _Wow_. Tap yourself on the back :clap: you've just built a mobile app!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/blank-rn-app.png" />
+  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/intro-blank-rn-app.png" />
 </p>
 
 ## Troubleshooting
