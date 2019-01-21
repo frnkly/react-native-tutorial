@@ -23,7 +23,10 @@ If possible, try to get there ahead of time to greet students and get settled in
 ## Workshop
 
 - Introduce yourself! Who are you? What do you do? What are your hobbies?
+- Introduce the mentors and/or volunteers!
+- Thank the organizers and the providers of the space!
 - Make sure everyone can hear you well.
+- Encourage pair programming. They'll end up moving faster if they're helping each other.
 - Try to get a feel for the audience's experience with programming, and adjust your pace accordingly.
 - Start with the _Intro_ module, to make sure everyone is comfortable with the command line.
 - If the workshop is scheduled to last more than 1.5 hours, plan to take breaks every 1.5 hours or so. Breaks should be long enough so everyone can use the restrooms if needed or catch-up on the code, but not so long that they get too distracted. Anywhere between 5 and 10 mins is usually good enough.
