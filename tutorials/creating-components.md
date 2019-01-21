@@ -1,4 +1,6 @@
-# Creating our components
+# Yakitty: a chat app for everyone :point_right: [bit.ly/yakitty](http://bit.ly/yakitty)
+
+## Module: **Creating our components**
 
 React is a component-based UI framework. That means we have to think of our app in terms of components, or "parts". Messaging apps often have the following elements:
 
@@ -58,10 +60,10 @@ In `App.js`, we'll _import_ our new component `MessageList` so we can actually u
 ```javascript
 // App.js
 
-// Add this line right after the "import React" line in App.js. We simply need
-// to specify the path to the component. Notice we don't need to add ".js".
-// This is just how imports work in React, or more specifically,
-// Babel (babeljs.io).
+// Add this line right before the "export default class App" line in App.js. We
+// simply need to specify the path to the component. Notice we don't need to add
+// ".js". This is just how imports work in React, or more specifically, Babel
+// (babeljs.io).
 import MessageList from './components/MessageList'
 ```
 
@@ -75,9 +77,9 @@ import React from 'react';
 // Since we're replacing the Text components with our MessageList, we don't need
 // to import it anymore. It's good practice to only import the components you're
 // actually using.
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native'
 
-import MessageList from './components/MessageList';
+import MessageList from './components/MessageList'
 
 export default class App extends React.Component {
   render() {
@@ -263,6 +265,10 @@ If all goes well, you're messages should still be visible. You'll also get a war
 
 >Each child in an array or iterator should have a unique "key" prop.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/creating-components-unique-key.png" />
+</p>
+
 React is an efficient framework: anytime a UI change happens in your app, only those components that have changed will get "re-rendered". This saves on memory and helps make your app run faster. To help React do its job, it needs to know which element in the array is which, so it can decide what changed and what does not need to be re-rendered. We'll simply make up fake unique IDs for now. Here's a truncated version of what your `MessageList.js` should look like:
 
 ```javascript
@@ -384,7 +390,7 @@ export default ({ sender, text, timestamp }) => (
   </View>
 )
 
-// Don't forget to import the "StyleSheet" component too.
+// Don't forget to import the "StyleSheet" component from "react-native" too.
 const styles = StyleSheet.create({
   // Styles for our component container (which is a <View> component)
   container: {

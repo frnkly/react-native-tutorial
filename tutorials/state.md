@@ -1,4 +1,6 @@
-# Using state and integrating 3rd party libraries (Moment.js)
+# Yakitty: a chat app for everyone :point_right: [bit.ly/yakitty](http://bit.ly/yakitty)
+
+## Module: **Using state and integrating 3rd party libraries (Moment.js)**
 
 - [Using state](#using-state)
 - [Integrating Moment.js](#integrating-momentjs)

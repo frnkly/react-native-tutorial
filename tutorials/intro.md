@@ -1,12 +1,15 @@
-# Intro to React Native
+# Yakitty: a chat app for everyone :point_right: [bit.ly/yakitty](http://bit.ly/yakitty)
+
+## Module: **Intro to React Native**
 
 ## Table of contents
 
 - [Terminal basics](#terminal-basics)
 - [Getting started](#getting-started)
-  - [Running the app](#running-the-app)
+    - [Running the app](#running-the-app)
+    - [Troubleshooting](#troubleshooting)
 - [React and React Native basics](#react-and-react-native-basics)
-  - [JSX: HTML in JavaScript](#jsx-html-in-javascript)
+    - [JSX: HTML in JavaScript](#jsx-html-in-javascript)
 - [Next module: Creating components](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/creating-components.md)
 - [Back to list of modules](https://github.com/frnkly/react-native-tutorial#modules)
 
@@ -39,7 +42,7 @@ npm --version
 # Check that Expo is installed and working
 expo --version
 
-# Login to Expo (not required)
+# Login to Expo (optional)
 expo login
 ```
 
@@ -58,12 +61,21 @@ cd ~/Code
 # Create a new React Native project called "yakitty". If you're asked to choose
 # a template, pick the blank one by pressing enter/return.
 npx create-react-native-app yakitty
-
-# Change directories into the newly created "yakitty" folder.
-cd yakitty
 ```
 
-If you get the message `Do you want to install it globally [Y/n]?` simply type in `y` and then press `enter` or `return`. If you're asked to choose a template, pick the blank one.
+You might encounter one of the following messages:
+
+- If you get the message `This command requires Expo CLI. Do you want to install it globally [Y/n]?` simply type in `y` and then press `enter` or `return`.
+- If you're asked to choose a template, pick the blank one.
+- If you're asked to `Use Yarn to install dependencies?` and you know about `Yarn` and prefer it over `npm`, you may keep using Yarn for the remainder of this tutorial, no worries.
+
+You will see a lot of `warning` messages. This is fine, I promise! In fact, if all goes well, you should see a message similar to:
+
+    Your project is ready at .../yakitty
+    To get started, you can type:
+
+      cd yakitty
+      npm start
 
 If you get "write errors", this might have something to do with how you installed Node. You can try again by adding `sudo` before the `npx ...` command, although I recommend you reinstall Node instead.
 
@@ -72,37 +84,47 @@ If you get "write errors", this might have something to do with how you installe
 sudo npx create-react-native-app yakitty
 ```
 
-We've just used the `npx` command provided by NPM to run a helpful script (`create-react-native-app`) written by the good people at React Native. That script downloaded some files and installed other dependencies we're going to need to get started. Fantastic  :ok_hand:
+We've just used the `npx` command provided by NPM to run a helpful script (`create-react-native-app`) written by the good people at React Native. That script downloaded some files and installed other dependencies we're going to need to get started. Fantastic :ok_hand:
 
 [&uarr; back to table of contents](#table-of-contents)
 
 ## Running the app
 
-Now let's run the app to see what we have so far. From your terminal, execute one of the following commands:
+Now let's run the app to see what we have so far. From your terminal, change directories into the newly created `yakitty` folder:
 
-```shell
-# If you're using your Android phone or iPhone. Don't forget to open the Expo app on your phone.
-expo start
+    cd yakitty
 
-# To use Expo with the Android emulator.
-expo android
+_Make sure your Android or iPhone emulator is running_. If you intend to develop using the Expo app on your phone, make sure your machine and phone share the same internet connection and that Expo is indeed installed on your phone.
 
-# To use Expo with the iOS emulator.
-expo ios
+Then, from your terminal, start Expo:
 
-# You can also run the emulator with the React Native scripts.
-react-native run-android
-```
+    expo start
 
-You can use the camera on your phone to point at the QR code that just appeared in your browser. It will open the Expo app on your phone _automagically_.
+You can use the camera on your phone to point at the QR code that just appeared in your browser, or use one of the links on the left-hand side to launch the app on your emulator. It will open the Expo app on your phone _automagically_.
 
-_Wow_. Tap yourself on the back :clap: you've just built a mobile app. Keep in mind the Expo app works best when your phone is on the same WiFi network as your computer.
+_Wow_. Tap yourself on the back :clap: you've just built a mobile app!
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/intro-blank-rn-app.png" />
+</p>
+
+## Troubleshooting
+
+If you're still having issues, try one of the following:
+
+### "Not a valid SDK option" or "This version of the Expo app is out of date"
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/intro-sdk-not-valid.png" />
+</p>
+
+Simply update the Expo app on your device or emulator by uninstalling and reinstalling it. If you're using the emulator, you can uninstall the app and run the above `expo start` command again to automatically reinstall Expo.
 
 [&uarr; back to table of contents](#table-of-contents)
 
 # React and React Native basics
 
-Open the "yakitty" folder in your fav code editor so we can have a look at the files `create-react-native-app` created for us. If you're using Visual Studio Code or Sublime Text (excellent choices!), you can pull up your editor from the terminal:
+Open the "yakitty" folder in your fav code editor so we can have a look at the files `create-react-native-app` created for us. If you're using Visual Studio Code or Sublime Text (excellent choices!), you can pull up your editor from a new terminal window:
 
 ```shell
 # Visual Studio Code users

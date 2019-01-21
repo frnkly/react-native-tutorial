@@ -1,12 +1,14 @@
-# Integrating 3rd party APIs (Chatkit)
+# Yakitty: a chat app for everyone :point_right: [bit.ly/yakitty](http://bit.ly/yakitty)
 
-Before we move further, I want to congratulate you for making it this far. Building an app is not easy, but you've shown guts and patience in pushing through until the end. _Bravo!_
+## Module: **Integrating 3rd party APIs (Chatkit)**
+
+Before we move further, I want to congratulate you for making it this far. Building an app is not easy, but you've shown guts and patience in pushing through. _Bravo!_
 
 We're going to introduce a new concept, which unlike the other concepts has broad applications in all kinds of software development. APIs are the glue that sticks programs together. They allow you to backup your iPhone (a piece of software) to iCloud (another piece of software). They allow you to sign up on websites using your Facebook or Google account. They allow your smart devices to interact with each other.
 
 APIs provide an _interface_ (the "I" in API) between _apps_ or _applications_ (the "A" in API) for them to communicate with each other.
 
-Just like Messenger or Slack, our app needs to store data in the cloud, or on _servers_, and manage chat histories, users, and so on. Thankfully, Chatkit provides an API to help us manage all of that. _Fiou!_
+Just like Messenger or Slack, our app needs to store data in the cloud, or on _servers_, and manage chat histories, users, and so on. Thankfully, [Chatkit](https://pusher.com/chatkit) provides an API to help us manage all of that. _Fiou!_
 
 ## Table of contents
 
@@ -18,7 +20,7 @@ Just like Messenger or Slack, our app needs to store data in the cloud, or on _s
 
 # Creating a Chatkit account
 
-Install Chatkit with `yarn add @pusher/chatkit` or `npm install @pusher/chatkit --save`, the same way we installed Moment.js earlier.
+Install Chatkit with `yarn add @pusher/chatkit-client` or `npm install @pusher/chatkit-client --save`, the same way we installed Moment.js earlier. You'll need to stop your development environment using `ctrl+c` or `cmd+c` as you did before. Once Chatkit has been installed, re-launch your environment using `expo start`.
 
 If you're following along in a workshop, then for the sake of the event we'll all use the same Chatkit account. Just choose a username and add it to this list: [bit.ly/yakitty-users](http://bit.ly/yakitty-users). This way we'll all be in the same chat room. In a real app, you would definitely create your own account and have users sign up or sign in through your user interface.
 
@@ -42,17 +44,13 @@ To help us stay organized in our code, we'll create a "chat manager" that will h
 // chatManager.js
 
 // Import the Chatkit library.
-import Chatkit from '@pusher/chatkit'
+import { ChatManager, TokenProvider } from '@pusher/chatkit-client/react-native'
 
 // Chatkit's sample code.
-const tokenProvider = new Chatkit.TokenProvider({
-  url: "YOUR TEST TOKEN ENDPOINT"
-})
-
-const chatManager = new Chatkit.ChatManager({
-  instanceLocator: "YOUR INSTANCE LOCATOR",
-  userId: "YOUR USER ID",
-  tokenProvider: tokenProvider
+const chatManager = new ChatManager({
+  instanceLocator: 'YOUR INSTANCE LOCATOR',
+  userId: 'YOUR USER ID',
+  tokenProvider: new TokenProvider({ url: 'YOUR TEST TOKEN ENDPOINT' })
 })
 
 // The default export for this file. This allows us to import it in
@@ -60,7 +58,9 @@ const chatManager = new Chatkit.ChatManager({
 export default chatManager
 ```
 
-You can replace "YOUR USER ID" with your own username. We'll also need to replace `url` and `instanceLocator` with the proper values. Notice that we didn't need to import React. We only need to import it when creating React components (which the Chat Manager is not).
+You can replace "YOUR USER ID" with your own username. We'll also need to replace `url` and `instanceLocator` with the values from your Pusher dashboard. If you're following along in a workshop, you can use the group values here: [bit.ly/yakitty-users](http://bit.ly/yakitty-users)
+
+Notice that we didn't need to import React. We only need to import it when creating React components (which the Chat Manager is not).
 
 In the `<MessageList>` component, let's import our Chat Manager and start using it. At the top, add:
 
@@ -109,9 +109,11 @@ export default class MessageList extends React.Component {
       this.room = await this.user.subscribeToRoom({
         roomId: this.user.rooms[0].id,
         hooks: {
-          onNewMessage: null,
+          onMessage: null,
         }
       });
+
+      console.log("We're connected to Chatkit! ᓩ")
     } catch (error) {
       // If anything bad happened, avoid the scary red error screen, but log
       // the error to the console.
@@ -136,20 +138,32 @@ You might be asking yourself why I decided to make the `user` and `room` propert
 
 Making them _props_ would mean passing them down from the parent component (in this case `App.js`) which doesn't apply in this case. Adding them to our _state_ would imply we might want to update them later in our code, which is also not the case. `user` and `room` are basically _constants_ whose values aren't known until we successfully connect to the Chatkit API.
 
-If you've followed all the instructions so far, you should see this beautiful screen:
+If you've followed all the instructions so far, you should see something similar to:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/9cdba4.jpg" />
+  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/apis-expected-function.jpg" />
 </p>
 
 Developing in JavaScript means learning to read sometimes cryptic error messages. Let's have a closer look:
 
->expected onNewMessage to be of type function but was of type object
+>expected hooks.onMessage to be of type function but was of type object
 
-Can you spot our mistake? I admit it: I modified the Chatkit sample code to introduce an error. `onNewMessage` in our code should refer to a function, and not to `null`. For now, replace `null` with:
+Can you spot our mistake? Inside our `componentDidMount` method, when subscribing to a chat room, `onMessage` in our code should refer to a function, and not to `null`. For now, let's replace `null` with:
 
 ```javascript
-msg => console.log('received new yak: ', Object.keys(msg))`
+msg => console.log('received new yak: ', Object.keys(msg))
+```
+
+So that the resulting code can look like:
+
+```javascript
+// Subscribe to the main room.
+this.room = await this.user.subscribeToRoom({
+  roomId: this.user.rooms[0].id,
+  hooks: {
+    onMessage: msg => console.log('received new yak: ', Object.keys(msg)),
+  }
+});
 ```
 
 This will allow us to see what Chatkit sends us when a user sends a message. Now head to your Chatkit dashboard and find your Instance Inspector, and click on "Add message to room" to inspect the output in your terminal. You should see something like this:
@@ -168,7 +182,7 @@ This will allow us to see what Chatkit sends us when a user sends a message. Now
 [20:30:51] ]
 ```
 
-Aha! So anytime we receive a new message, we know we'll have access to these keys. The ones that matter to us are `id`, `senderId`, `text` and `createdAt`. Let's create a handler method called `handleReceiveMessage`, and pass that on to `onNewMessage`:
+Aha! So anytime we receive a new message, we know we'll have access to these keys. The ones that matter to us are `id`, `senderId`, `text` and `createdAt`. Let's create a handler method called `handleReceiveMessage`, and pass that on to `onMessage`:
 
 ```javascript
 // components/MessageList.js
@@ -421,9 +435,9 @@ render() {
 
 # Hiding developer secrets
 
-Our Chat Manager provides conveniently hides the Chatkit setup from the rest of our code. But sometimes when working with other developers or when sharing your code on [Github](https://github.com), you'll want to keep some things private, such as the `tokenProvider`'s `url` or your `instanceLocator`.
+Our Chat Manager conveniently hides the Chatkit setup from the rest of our code. But sometimes when working with other developers or when sharing your code on [Github](https://github.com), you'll want to keep some things private, such as the `tokenProvider`'s `url` or your `instanceLocator`.
 
-It's common practice to put sensitive info inside a `config.js` file, and then set those details from the environment or by other means. Here's what a configuration file might look like:
+It's common practice to put sensitive info inside a `config.js` file, and then set those details from the environment or by other means. Let's go ahead and follow common practice. Here's what a configuration file might look like:
 
 ```javascript
 // config.js
