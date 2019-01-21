@@ -141,7 +141,7 @@ Making them _props_ would mean passing them down from the parent component (in t
 If you've followed all the instructions so far, you should see something similar to:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/apis-expected-function.jpg" />
+  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/apis-expected-function.png" />
 </p>
 
 Developing in JavaScript means learning to read sometimes cryptic error messages. Let's have a closer look:

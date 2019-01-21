@@ -215,7 +215,7 @@ That's it. That's how state works. If you're still confused, I invite you to che
 At this point, your app should look something like this:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/48624f.jpg" />
+  <img src="https://raw.githubusercontent.com/frnkly/react-native-tutorial/stable/tutorials/state-timestamps.jpg" />
 </p>
 
 Pretty cool. Except for those random numbers showing up next to the sender's name. If you've developed with JavaScript before, you might already be familiar with [Moment.js](https://momentjs.com), a library for easily formatting dates and times. The great thing about building mobile apps with JavaScript is that you can reuse a lot of the stuff you already know from making kick-ass web apps.
