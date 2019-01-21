@@ -1,0 +1,17 @@
+{
+  "name": "yakitty",
+  "version": "0.2.0",
+  "description": "A simple React Native tutorial for building mobile apps",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frnkly/react-native-tutorial.git"
+  },
+  "devDependencies": {
+    "@pusher/chatkit-client": "^1.3.0",
+    "prompt": "^1.0.0"
+  }
+}
