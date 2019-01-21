@@ -1,5 +1,9 @@
 # Yakitty: a chat app for everyone :point_right: [bit.ly/yakitty](http://bit.ly/yakitty)
 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0">
+  <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+</a>
+
 ## What's this?
 
 >yak (verb): to talk persistently. Also, a large long-haired wild or domesticated ox :ox:
@@ -72,3 +76,5 @@ I'll even provide you these QR codes for your convenience, so you don't have to 
 - [Resources](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/resources.md)
 
 Have any requests? Let me know :point_right: [bit.ly/yakitty-feedback](http://bit.ly/yakitty-feedback)
+
+_This content is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0) license._
