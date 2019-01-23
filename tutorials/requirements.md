@@ -52,6 +52,37 @@ Once you've decided which option is right for you, make sure the following softw
 - [Node & NPM](https://nodejs.org)
 - [Expo](https://docs.expo.io)
 
+# Troubleshooting
+
+## Node permission errors using Homebrew on OSX
+
+If you're having trouble installing Node on your Mac, try the following commands to re-install the latest version:
+
+```shell
+brew uninstall node
+brew update
+brew update # a second time, just to be sure
+brew doctor
+brew upgrade
+brew install node
+```
+
+If that still doesn't do the trick, try fixing the file ownership settings in your `/usr/local` folder (tip from [Homebrew's help page](https://docs.brew.sh/Troubleshooting)):
+
+```shell
+cd /usr/local && sudo chown -R $(whoami) bin etc include lib sbin share var opt Cellar Caskroom Framework
+```
+
+If that _still doesn't work_, I would opt for using [NVM](https://github.com/creationix/nvm) instead:
+
+```shell
+brew uninstall node
+
+# You'll find the latest version of NVM on their website: https://github.com/creationix/nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+nvm install node
+```
+
 [&rarr; intro to React Native](https://github.com/frnkly/react-native-tutorial/blob/stable/tutorials/intro.md)
 
 [&larr; list of modules](https://github.com/frnkly/react-native-tutorial#modules)
