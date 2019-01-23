@@ -13,10 +13,10 @@ If possible, try to get there ahead of time to greet students and get settled in
   - https://alternativeto.net/software/sublime-text
   - https://pusher.com/chatkit
   - https://momentjs.com
-  - The Yakitty user's list.
+  - http://bit.ly/yakitty-users
 - Get everyone to install the Expo app on their phones and machines. They can also create a free account on [expo.io](https://expo.io), but should be able to develop without one.
 - Make sure _both_ your emulator and code editor will be visible on the projector when you start.
-- Show the README page on the projector, so that students can open the bit.ly link as they settle in.
+- Show the README page on the projector, so that students can open the [bit.ly](http://bit.ly/yakitty) link as they settle in.
 - Take out your notebook, if you'd like to take notes or write down feedback.
 - Grab some water, and enjoy yourself :)
 
